@@ -20,6 +20,7 @@ Output: true*/
 /*
 Method (1)
 TimeCompexity = n^2
+space is contant= 0(1)
 */ 
 const ContainsDuplicate = function (nums) {
 for(let i=0;i<nums.length;i++){
@@ -29,6 +30,23 @@ for(let i=0;i<nums.length;i++){
 }
 return false
 }
+
+
+//By using sorting techinuqe 
+//sorting is nlogn (tiecompexity)
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+    nums.sort()
+ for(let i=0;i<nums.length-1;i++){
+     if(nums[i]==nums[i+1]) return true
+    
+     
+ }  
+ return false 
+};
 
 
 console.log(ContainsDuplicate([1,2,3,4,1]))
